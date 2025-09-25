@@ -1,5 +1,5 @@
 USER = "prav"
-HOST = "MacBook-Pro-Prav"
+HOST = "MacBook-Pro-VFS"
 SYMBOL = "%"
 CWD = "~"
 
