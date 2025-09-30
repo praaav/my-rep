@@ -4,8 +4,18 @@ SYMBOL = "%"
 CWD = "~"
 
 def parse(s):
-    p = s.strip().split()
-    return (p[0], p[1:]) if p else ("", [])
+    out, buf, q = [], "", None
+    for ch in s.strip():
+        if q:
+            if ch == q: q = None
+            else: buf += ch
+        else:
+            if ch in ("'", '"'): q = ch
+            elif ch.isspace():
+                if buf: out.append(buf); buf = ""
+            else: buf += ch
+    if buf: out.append(buf)
+    return (out[0], out[1:]) if out else ("", [])
 
 def cmd_ls(args):
     print(f"[stub] ls -> args: {args}")
