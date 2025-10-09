@@ -20,6 +20,7 @@ def parse(s):
 def cmd_ls(args):
     print(f"[stub] ls -> args: {args}")
 
+
 def cmd_cd(args):
     print(f"[stub] cd -> args: {args}")
 
@@ -51,3 +52,4 @@ def repl():
 
 if __name__ == "__main__":
     repl()
+
