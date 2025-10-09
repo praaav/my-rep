@@ -1,0 +1,6 @@
+# это комментарий
+conf-dump
+ls "my folder"
+cd test
+foo
+#exit 0
